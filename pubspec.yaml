@@ -1,0 +1,9 @@
+name: syllables
+version: 0.0.2
+homepage: https://github.com/kharland/syllables
+description: A Dart library for playing English syllables.
+author: Kendal Harland <kendaljharland@gmail.com>
+dependencies:
+  packages:
+dev_dependencies:
+  test:
