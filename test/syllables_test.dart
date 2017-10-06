@@ -82,7 +82,7 @@ void main() {
             "I'm",
             "Roger"
           ], overrides: {
-            'Roger': 100,
+            'roger': 100,
           }),
           102);
     });

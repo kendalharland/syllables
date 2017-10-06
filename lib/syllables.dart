@@ -13,9 +13,10 @@ final _dict = buildCmuDict();
 /// the syllables for a word cannot be computed, or if the word is in
 /// [overrides], the override is used instead.
 int countSyllables(String word, {Map<String, int> overrides: const {}}) {
-  if (overrides.containsKey(word)) return overrides[word];
-
   var normalWord = word.toLowerCase().replaceAll(unallowedChars, ' ').trim();
+
+  if (overrides.containsKey(normalWord)) return overrides[normalWord];
+
   if (normalWord.contains(' ')) {
     var words = normalWord.split(' ')..removeWhere((w) => w.trim().isEmpty);
     return countSyllablesAll(words.toList(), overrides: overrides);
